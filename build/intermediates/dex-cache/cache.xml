@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\23.1.1\8d680ba5a623724d1fb0e81c36a790f023a6cede\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_22558b779b0e768757658f5d1e9504c1a6c8c5d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.android\build-cache\dc8cb7f295b8a7e289bcf6d0b1bf92f50240c57b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\classes_0c897f82fd24e7d252c4fce52b83f708ceb8194d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.android\build-cache\100a503585f48e35aeb11a37bd22f4b194000122\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\classes_1fa3c5f24a848a086743a943fb0aaf5bbbaafce9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.android\build-cache\dc8cb7f295b8a7e289bcf6d0b1bf92f50240c57b\output\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_4879d5a939f26a95353c17c51c6422ef78a9e828.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.android\build-cache\5d755e984386a3da52120337c3ad9eced4acd148\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\classes_f4dec7dd6f06a0a10d3f4d88810ed7ac2169370b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\krish\.android\build-cache\6831c881b8d35388a81ca4248848afc9be5d3afd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\krish\AndroidStudioProjects\SimpleExpenseManager\app\build\intermediates\pre-dexed\debug\classes_5bd917cfb3748ed8986d17f5c9f7af1ff347302a.jar" />
+    </item>
+
+</items>
