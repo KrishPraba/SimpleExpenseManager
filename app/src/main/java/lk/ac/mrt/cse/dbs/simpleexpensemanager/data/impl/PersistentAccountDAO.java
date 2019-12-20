@@ -16,12 +16,12 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 
 
 public class PersistentAccountDAO extends SQLiteOpenHelper implements AccountDAO {
-    public static final String DATABASE_NAME = "170454J.db";
-    public static final String TABLE_NAME = "account";
-    public static final String COLUMN_1 = "accountno";
-    public static final String COLUMN_2 = "bankname";
-    public static final String COLUMN_3 = "accountholdername";
-    public static final String COLUMN_4 = "balance";
+    private static final String DATABASE_NAME = "170454J.db";
+    private static final String TABLE_NAME = "account";
+    private static final String COLUMN_1 = "accountno";
+    private static final String COLUMN_2 = "bankname";
+    private static final String COLUMN_3 = "accountholdername";
+    private static final String COLUMN_4 = "balance";
 
     public PersistentAccountDAO(Context context) {
         super(context, DATABASE_NAME , null,1);
@@ -46,7 +46,7 @@ public class PersistentAccountDAO extends SQLiteOpenHelper implements AccountDAO
         Cursor result =  database.rawQuery( "select * from "+TABLE_NAME, null );
         result.moveToFirst();
 
-        while(result.isAfterLast() == false){
+        while(!result.isAfterLast()){
             accountNumber.add(result.getString(result.getColumnIndex(COLUMN_1)));
             result.moveToNext();
         }
@@ -64,7 +64,7 @@ public class PersistentAccountDAO extends SQLiteOpenHelper implements AccountDAO
 
         result.moveToFirst();
 
-        while(result.isAfterLast() == false){
+        while(!result.isAfterLast()){
             String accountNo = result.getString(result.getColumnIndex(COLUMN_1));
             String bankName = result.getString(result.getColumnIndex(COLUMN_2));
             String accountHolderName = result.getString(result.getColumnIndex(COLUMN_3));
@@ -138,12 +138,12 @@ public class PersistentAccountDAO extends SQLiteOpenHelper implements AccountDAO
         switch (expenseType) {
             case EXPENSE:
                 balanceNew = balance - amount;
-                cV.put("balance", balance);
+                cV.put("balance", balanceNew);
 //                account.setBalance(account.getBalance() - amount);
                 break;
             case INCOME:
                 balanceNew = balance + amount;
-                cV.put("balance", balance);
+                cV.put("balance", balanceNew);
 //                account.setBalance(account.getBalance() + amount);
                 break;
         }

@@ -71,7 +71,7 @@ public class PersistentTransactionDAO extends SQLiteOpenHelper implements Transa
 
         result.moveToFirst();
 
-        while(result.isAfterLast() == false){
+        while(!result.isAfterLast()){
 
             String accountNo = result.getString(result.getColumnIndex(COL_2));
             Double amount = result.getDouble(result.getColumnIndex(COL_5));
@@ -88,7 +88,26 @@ public class PersistentTransactionDAO extends SQLiteOpenHelper implements Transa
     }
 
     @Override
-    public List<Transaction> getPaginatedTransactionLogs(int limit) {
+    public List<Transaction> getPaginatedTransactionLogs(int limit) throws ParseException {
+        transactions.clear();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor result =  db.rawQuery( " select * from " + TABLE_NAME, null );
+
+        result.moveToFirst();
+
+        while(!result.isAfterLast()){
+
+            String accountNo = result.getString(result.getColumnIndex(COL_2));
+            Double amount = result.getDouble(result.getColumnIndex(COL_5));
+            String transType = result.getString(result.getColumnIndex(COL_4));
+
+            ExpenseType type = ExpenseType.valueOf(transType);
+            String date = result.getString(result.getColumnIndex(COL_3));
+            Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(date);
+
+            transactions.add(new Transaction(date1,accountNo,type,amount));
+            result.moveToNext();
+        }
         int size = transactions.size();
         if (size <= limit) {
             return transactions;

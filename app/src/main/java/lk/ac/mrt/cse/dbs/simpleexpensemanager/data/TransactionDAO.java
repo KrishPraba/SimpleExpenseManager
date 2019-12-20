@@ -51,5 +51,5 @@ public interface TransactionDAO {
      * @param limit - number of transactions to be returned
      * @return - a list of requested number of transactions
      */
-    public List<Transaction> getPaginatedTransactionLogs(int limit);
+    public List<Transaction> getPaginatedTransactionLogs(int limit) throws ParseException;
 }
